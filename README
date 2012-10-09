@@ -1,0 +1,6 @@
+This is a very simple API for interacting with lightweight queues. Currently queues that speak the memcached protocol, Amazon's SQS service, and Beanstalkd are supported. External backends can be easily defined and used as long as they conform to the BaseQueue API.
+
+This library is designed to be configured either from a Django settings file or via environment variables. Heavy lifting is done by one of the backend libraries:
+
+
+Read more at: http://code.google.com/p/queues/
