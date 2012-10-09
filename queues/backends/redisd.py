@@ -56,6 +56,9 @@ def _get_connection(host=host, port=port, db=DB, timeout=TIMEOUT):
         kwargs['socket_timeout'] = kwargs.pop('timeout')
         return redis.Redis(**kwargs)
 
+def disconnect(self):
+    self._connection.disconnect()
+
 class Queue(BaseQueue):
     def __init__(self, name):
         try:            
